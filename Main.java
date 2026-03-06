@@ -18,6 +18,16 @@ public class Main {
     }
 
     public static void selectionSort(int[] array) {
-        
+        for (int i=0; i<array.length;i++){
+            int start=i;
+            for (int j=i+1; j<array.length; j++){
+                if (array[start] > array[j]){
+                    start=j;
+                }
+            }
+            int temporary=array[i];
+            array[i]=array[start];
+            array[start]=temporary;
+        }
     }
 }
